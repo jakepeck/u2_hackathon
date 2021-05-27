@@ -3,9 +3,8 @@ const Schema = mongoose.Schema
 
 const Order = new Schema(
   {
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    image: { type: String, required: true }
+    items: { type: Array, required: true },
+    orderId: { type: Number, required: true }
   },
   { timestamps: true }
 )
