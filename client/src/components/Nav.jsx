@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 export default class Nav extends Component {
   render() {
     return (
-      <nav className="navbar">
+      <nav className="topper">
         <h4>Big Munch</h4>
-        <div>
+        <div className="navbar">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/lunch">Lunch</NavLink>
           <NavLink to="/dinner">Dinner</NavLink>

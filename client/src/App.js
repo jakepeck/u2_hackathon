@@ -15,6 +15,7 @@ export default class App extends Component {
     super(props)
     this.state = {
       menu: [],
+      selectedItem: null // Will be itemID once state sets
     }
   }
 
@@ -25,6 +26,11 @@ export default class App extends Component {
 
   }
 
+  chooseItem = (itemID) => {
+    this.setState({
+      selectedItem: itemID
+    })
+  }
 
 
   render() {
@@ -35,11 +41,36 @@ export default class App extends Component {
         </header>
         <main>
           <Switch>
-            <Route exact path="/" component={(props) => <Home {...props} menu={this.state.menu} />}/>
-            <Route path="/Lunch" component={(props) => <Lunch {...props} menu={this.state.menu} />}/>
-            <Route path="/Dinner" component={(props) => <Dinner {...props} menu={this.state.menu} />}/>
-            <Route path="/Dessert" component={(props) => <Dessert {...props} menu={this.state.menu} />}/>
-            <Route path="/Drinks" component={(props) => <Drinks {...props} menu={this.state.menu} />}/>
+            <Route exact path="/" component={(props) => 
+              <Home {...props} 
+                menu={this.state.menu} 
+                selectedItem={this.state.selectedItem}
+              />
+            }/>
+            <Route path="/Lunch" component={(props) => 
+              <Lunch {...props} 
+                menu={this.state.menu} 
+                selectedItem={this.state.selectedItem} 
+              />
+            }/>
+            <Route path="/Dinner" component={(props) => 
+              <Dinner {...props} 
+                menu={this.state.menu} 
+                selectedItem={this.state.selectedItem} 
+              />
+            }/>
+            <Route path="/Dessert" component={(props) => 
+              <Dessert {...props} 
+                menu={this.state.menu} 
+               selectedItem={this.state.selectedItem} 
+              />
+            }/>
+            <Route path="/Drinks" component={(props) => 
+              <Drinks {...props} 
+                menu={this.state.menu} 
+                selectedItem={this.state.selectedItem} 
+              />
+            }/>
           </Switch>
         </main>
       </div>
