@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class Drinks extends Component {
   render() {
     return (
-      <div>
+      <div style={{ color: 'white'}}>
 
-Drinks
+        Drinks
 
       </div>
     );

@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <div style={{ color: 'white'}}>
 
-Home 
+        Home 
 
       </div>
     );
