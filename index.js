@@ -12,7 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(logger('dev'))
 
 // Your Code Here
-
+app.get('/', (req, res) => {
+  console.log('Welcome to the homepage')
+  res.send('Welcome to the homepage')
+})
 
 // Your Code Ends Here
 app.listen(PORT, () => {
