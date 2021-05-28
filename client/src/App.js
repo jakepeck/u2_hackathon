@@ -25,8 +25,8 @@ export default class App extends Component {
 
   async componentDidMount() {
     const res = await axios.get(`${BASE_URL}/menuitems`)
-    this.setState({ menu: res.data.menuitems })
 
+    this.setState({ menu: res.data.menuitems })
   }
 
   chooseItem = (itemID) => {
@@ -55,7 +55,7 @@ for (let i=0;i<this.state.menu.length; i++) {
     default :
   }
 }
-console.log(this.state.appMenu)
+
     return (
       <div className="App" style={{ color: 'white'}}>
 
