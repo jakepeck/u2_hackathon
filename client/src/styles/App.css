@@ -33,10 +33,13 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+  font-family: 'cardoregular';
 }
 
 .App {
    margin: 0 auto;
+   width: 100%;
 }
 
 .topper {
@@ -88,7 +91,6 @@ body {
 
 
 .page {
-  height: 50vh;
   width: 100%;
   display: flex;
   flex-flow: column wrap;
@@ -99,12 +101,46 @@ body {
 
 .menu-list {
   width: 80%;
-  margin-top: 20vh;
+  margin: 0 auto;
+  margin-top: 10vh;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
 .menu-item {
+  width: 25%;
   font-size: 1em;
   margin: 20px;
+  padding: 15px;
+  color:whitesmoke;
+  background: rgba(0, 0, 0,0.7);
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.description {
+  width: 100%;
+  line-height: 100%;
+}
+
+button {
+  justify-self: flex-start;
+  margin-top: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+  align-self: center;
+  padding: 6px 12px;
+  border-radius: 5px;
+  background-color: black;
+  color: #ddd;
+  text-transform: uppercase;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.price {
+  float: right;
 }
