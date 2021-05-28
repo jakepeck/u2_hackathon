@@ -4,14 +4,14 @@ const router = Router()
 
 router.get('/', (req, res) => res.send('This is root!'))
 
-router.post('/orders', controllers.createOrder)
+router.post('/menuitems', controllers.createMenuItem)
 
-router.get('/orders', controllers.getAllOrders)
+router.get('/menuitems', controllers.getAllMenuItems)
 
-router.get('/orders/:id', controllers.getOrderById)
+router.get('/menuitems/:id', controllers.getMenuItemById)
 
-router.put('/orders/:id', controllers.updateOrder)
+router.put('/menuitems/:id', controllers.updateMenuItem)
 
-router.delete('/orders/:id', controllers.deleteOrder)
+router.delete('/menuitems/:id', controllers.deleteMenuItem)
 
 module.exports = router
