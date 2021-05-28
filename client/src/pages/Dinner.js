@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export default class Dinner extends Component {
   render() {
     return (
-      <div>
+      <div className="page">
 
-Dinner 
+        Dinner 
 
       </div>
     );
