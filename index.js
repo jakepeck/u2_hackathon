@@ -14,10 +14,7 @@ app.use(logger('dev'))
 app.use('/api', routes)
 
 // Your Code Here
-app.get('/', (req, res) => {
-  console.log('Welcome to the homepage')
-  res.send('Welcome to the homepage')
-})
+app.use('/api', routes);
 
 // Your Code Ends Here
 app.listen(PORT, () => {
