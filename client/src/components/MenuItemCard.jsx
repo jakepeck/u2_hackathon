@@ -7,7 +7,7 @@ export default class MenuItemCard extends Component {
     return (
       <div
         className="menu-item"
-        onClick={() => this.props.showItem(chosenItem)}>
+        onClick={() => this.props.showItem(menuItem)}>
         <img
           style={{ display: 'block' }}
           src={menuItem.img}
