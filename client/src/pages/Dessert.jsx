@@ -8,7 +8,6 @@ export default class Dessert extends Component {
 
         <MenuList menu={this.props.menu} />
 
-
       </div>
     );
   }
