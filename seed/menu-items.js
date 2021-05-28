@@ -1,5 +1,5 @@
 const db = require('../db')
-const Plant = require('../models/order')
+const Order = require('../models/order')
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -98,7 +98,7 @@ const main = async () => {
 ]
 
   await Order.insertMany(menuItems)
-  console.log("Created some menu items!")
+  console.log("Added some menu items!")
 }
 const run = async () => {
   await main()
