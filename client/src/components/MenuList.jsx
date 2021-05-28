@@ -8,7 +8,7 @@ export default class MenuList extends Component {
   }
 
   render() {
-    const { menu } = this.props
+    const menu = this.props.menu
 
     const menuList = menu.map(menuItem => {
       return <MenuItemCard
