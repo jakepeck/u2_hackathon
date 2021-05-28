@@ -9,13 +9,13 @@ export default class MenuItemCard extends Component {
       <div
         className="menu-item">
         <img
-          src='../images/${menuItem.image}'
+          src={menuItem.image}
           alt={menuItem.name}
         />
         <h3>{menuItem.name}<span className="price">${menuItem.price}</span></h3>
         <div className="description">{menuItem.description}</div>
         <button>Add to Order</button>
-      </div>
+      </div >
     )
   }
 }
