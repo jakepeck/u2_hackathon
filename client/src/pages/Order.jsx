@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class Lunch extends Component {
+export default class Order extends Component {
   render() {
     return (
       <div className="page">
 
-        Lunch 
+        Order
 
       </div>
     );

@@ -4,6 +4,8 @@ body {
   width: 100vw;
   background-image: url(/src/images/restaurant_counter.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -14,24 +16,26 @@ body {
 .topper {
   width: 100%;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 75%;
   align-items: center;
   background-color: black;
   font-size: 1.5em;
 }
 
-h4 {
-  font-size: 1.5em;
+.topper img {
+  margin-bottom: -120px;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-left: -15%;
 }
 
 .navbar a {
   text-decoration: none;
   color: whitesmoke;
+  margin: 30px;
 }
 
 .page {

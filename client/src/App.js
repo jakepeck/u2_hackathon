@@ -4,8 +4,8 @@ import {Route, Switch} from 'react-router-dom';
 import axios from 'axios'
 import { BASE_URL, axiosConfig } from './globals'
 import Nav from './components/Nav'
-import Home from './pages/Home'
-import Lunch from './pages/Lunch'
+import Order from './pages/Order'
+import Apps from './pages/Apps'
 import Dinner from './pages/Dinner'
 import Dessert from './pages/Dessert'
 import Drinks from './pages/Drinks'
@@ -42,13 +42,13 @@ export default class App extends Component {
         <main>
           <Switch>
             <Route exact path="/" component={(props) => 
-              <Home {...props} 
+              <Order {...props} 
                 menu={this.state.menu} 
                 selectedItem={this.state.selectedItem}
               />
             }/>
-            <Route path="/Lunch" component={(props) => 
-              <Lunch {...props} 
+            <Route path="/Appetizers" component={(props) => 
+              <Apps {...props} 
                 menu={this.state.menu} 
                 selectedItem={this.state.selectedItem} 
               />
