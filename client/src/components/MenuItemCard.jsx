@@ -13,10 +13,9 @@ export default class MenuItemCard extends Component {
           src={menuItem.image}
           alt={menuItem.name}
         />
-        <h4>{menuItem.name}</h4>
-        <h3>Price: ${menuItem.price}</h3>
+        <h3>{menuItem.name}<span className="price">${menuItem.price}</span></h3>
         <div className="description">{menuItem.description}</div>
-        <button></button>
+        <button>Add to Order</button>
       </div>
     )
   }
