@@ -25,7 +25,6 @@ export default class App extends Component {
 
   async componentDidMount() {
     const res = await axios.get(`${BASE_URL}/menuitems`)
-    console.log(res.data)
     this.setState({ menu: res.data.menuitems })
   }
 
