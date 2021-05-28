@@ -20,8 +20,7 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get(`${BASE_URL}/#`, axiosConfig)
-    // console.log(res)
+    const res = await axios.get(`http://localhost:3001/testAPI`, axiosConfig)
     this.setState({ menu: res.data.results })
 
   }
