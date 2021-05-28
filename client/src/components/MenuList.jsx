@@ -8,9 +8,9 @@ export default class MenuList extends Component {
   }
 
   render() {
-    const { } = this.props
+    const { menu } = this.props
 
-    const menuList = this.props.menu.map(menuItem => {
+    const menuList = menu.map(menuItem => {
       return <MenuItemCard
         key={`${menuItem.id}${menuItem.name}`}
         showItem={this.showItem}

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import ItemDetails from './ItemDetails'
 
 
 export default class MenuItemCard extends Component {
   render() {
-    const { } = this.props
+    const { menuItem } = this.props
     return (
       <div
         className="menu-item"

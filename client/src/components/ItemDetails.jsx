@@ -9,7 +9,7 @@ export default class ItemDetails extends Component {
   }
 
   componentDidMount() {
-    let chosenItem = this.props.menuList.find((item) => item.id === parseInt(this.props.match.params.id))
+    let chosenItem = this.props.menu.find((item) => item.id === parseInt(this.props.match.params.id))
     this.setState({ menuItem: chosenItem })
   }
   // functions here

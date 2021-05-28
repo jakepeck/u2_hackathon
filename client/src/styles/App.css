@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'cardobold';
+  src: url('../fonts/cardo-bold-webfont.woff2') format('woff2'),
+       url('../fonts/cardo-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cardoitalic';
+  src: url('../fonts/cardo-italic-webfont.woff2') format('woff2'),
+       url('../fonts/cardo-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'cardoregular';
+  src: url('../fonts/cardo-regular-webfont.woff2') format('woff2'),
+       url('../fonts/cardo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -19,7 +46,7 @@ body {
   grid-template-columns: 25% 75%;
   align-items: center;
   background-color: black;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .topper img {
@@ -35,11 +62,29 @@ body {
 .navbar a {
   text-decoration: none;
   color: whitesmoke;
-  margin: 30px;
+  margin: 25px;
+  font-family: 'cardoregular';
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.navbar a span {
+  width: 100%;
+  margin-top: -25px;
+  margin-left: 30%;
+  padding: 0;
 }
 
 .navbar a:focus {
   color: gold;
+  font-family: 'cardoitalic';
+  margin: 23px 25px;
+}
+
+.navbar a:focus span:after {
+  content: '︿';
+  position: absolute;
 }
 
 
