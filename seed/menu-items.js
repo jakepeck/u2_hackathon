@@ -39,7 +39,7 @@ const main = async () => {
     { name: 'Bruschetta',
       type: 'app',
       description: 'Housemade bread brushed with garlic-infused olive oil, a pinch of salt, and topped with garden fresh tomatoes, onion, and herbs.',
-      image: `https://www.canva.com/design/DAEfu4N-gUM/arhIIHs33mXY3O1ppCgUpA/view?utm_content=DAEfu4N-gUM&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton`,
+      image: "https://imgur.com/tDKsRMt",
       price: 12},
 
     { name: 'Charcuterie Board',
