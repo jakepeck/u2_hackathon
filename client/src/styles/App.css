@@ -38,6 +38,12 @@ body {
   margin: 30px;
 }
 
+.navbar a:focus {
+  color: gold;
+}
+
+
+
 .page {
   height: 50vh;
   display: flex;
