@@ -33,7 +33,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  overflow: hidden;
 }
 
 .App {
@@ -88,11 +87,24 @@ body {
 }
 
 
-
 .page {
   height: 50vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 10em;
+  font-size: 1em;
+}
+
+.menu-list {
+  width: 80%;
+  margin-top: 20vh;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.menu-item {
+  font-size: 1em;
+  margin: 20px;
 }
