@@ -33,10 +33,12 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 .App {
    margin: 0 auto;
+   width: 100%;
 }
 
 .topper {
@@ -88,7 +90,6 @@ body {
 
 
 .page {
-  height: 50vh;
   width: 100%;
   display: flex;
   flex-flow: column wrap;
@@ -99,12 +100,18 @@ body {
 
 .menu-list {
   width: 80%;
-  margin-top: 20vh;
+  margin: 0 auto;
+  margin-top: 15vh;
   display: flex;
   flex-flow: row wrap;
 }
 
 .menu-item {
+  width: 25%;
   font-size: 1em;
   margin: 20px;
+}
+
+.description {
+  width: 100%;
 }
