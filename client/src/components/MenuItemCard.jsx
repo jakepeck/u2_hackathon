@@ -7,10 +7,9 @@ export default class MenuItemCard extends Component {
 
     return (
       <div
-        className="menu-item"
-        /*onClick={() => this.props.showItem(menuItem)}*/>
+        className="menu-item">
         <img
-          src={menuItem.image}
+          src='../images/${menuItem.image}'
           alt={menuItem.name}
         />
         <h3>{menuItem.name}<span className="price">${menuItem.price}</span></h3>

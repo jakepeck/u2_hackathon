@@ -39,6 +39,9 @@ export default class App extends Component {
   render() {
 
 for (let i=0;i<this.state.menu.length; i++) {
+  let imagePath = this.state.menu[i].image;
+  let imageSrc = `../images/${imagePath}`
+  this.state.menu[i].image = imageSrc
   switch (this.state.menu[i].type) {
     case 'app' :
       this.state.appMenu.push(this.state.menu[i])
