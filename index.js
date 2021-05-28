@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
   res.send('Welcome to the homepage')
 })
 
+app.post('/Order', (req, res) => {
+  console.log('Welcome to the homepage')
+  res.send('Welcome to the homepage')
+})
+
 // Your Code Ends Here
 app.listen(PORT, () => {
   console.log(`App listening on port: ${PORT}`)

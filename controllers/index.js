@@ -26,9 +26,9 @@ const getOrderById = async (req, res) => {
     const { id } = req.params
     const order = await Order.findById(id)
     if (order) {
-      return res.status(200).json({ plant })
+      return res.status(200).json({ order })
     }
-    return res.status(404).send('Plant with the specified ID does not exists')
+    return res.status(404).send('Menu item with the specified ID does not exists')
   } catch (error) {
     return res.status(500).send(error.message)
   }
