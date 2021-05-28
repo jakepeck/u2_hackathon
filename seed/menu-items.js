@@ -1,11 +1,11 @@
 const db = require('../db')
-const Order = require('../models/order')
+const MenuItem = require('../models/menuitem')
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  const menuItems = [
+  const menuitems = [
     { name: 'Brews',
       type: 'drink',
       description: `Regular rotation of microbrews from local breweries. Ask your server what's on tap!`,
@@ -97,7 +97,7 @@ const main = async () => {
       price: 13}      
 ]
 
-  await Order.insertMany(menuItems)
+  await MenuItem.insertMany(menuitems)
   console.log("Added some menu items!")
 }
 const run = async () => {

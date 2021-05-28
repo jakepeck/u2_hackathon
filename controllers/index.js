@@ -1,32 +1,32 @@
-const Order = require('../models/order')
+const MenuItem = require('../models/menuitem')
 
-const createOrder = async (req, res) => {
+const createMenuItem = async (req, res) => {
   try {
-    const order = await new Order(req.body)
-    await order.save()
+    const menuitem = await new MenuItem(req.body)
+    await menuitem.save()
     return res.status(201).json({
-      order
+      menuitem
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
 }
 
-const getAllOrders = async (req, res) => {
+const getAllMenuItems = async (req, res) => {
   try {
-    const orders = await Order.find()
-    return res.status(200).json({ orders })
+    const menuitems = await MenuItem.find()
+    return res.status(200).json({  menuitems })
   } catch (error) {
     return res.status(500).send(error.message)
   }
 }
 
-const getOrderById = async (req, res) => {
+const getMenuItemById = async (req, res) => {
   try {
     const { id } = req.params
-    const order = await Order.findById(id)
-    if (order) {
-      return res.status(200).json({ order })
+    const menuitem = await MenuItem.findById(id)
+    if (menuitem) {
+      return res.status(200).json({ menuitem })
     }
     return res.status(404).send('Menu item with the specified ID does not exists')
   } catch (error) {
@@ -34,40 +34,40 @@ const getOrderById = async (req, res) => {
   }
 }
 
-const updateOrder = async (req, res) => {
+const updateMenuItem = async (req, res) => {
   try {
     const { id } = req.params
-    await Order.findByIdAndUpdate(id, req.body, { new: true }, (err, order) => {
+    await MenuItem.findByIdAndUpdate(id, req.body, { new: true }, (err, menuitem) => {
       if (err) {
         res.status(500).send(err)
       }
-      if (!order) {
-        res.status(500).send('Order not found!')
+      if (!menuitem) {
+        res.status(500).send('Menu item not found!')
       }
-      return res.status(200).json(order)
+      return res.status(200).json(menuitem)
     })
   } catch (error) {
     return res.status(500).send(error.message)
   }
 }
 
-const deleteOrder = async (req, res) => {
+const deleteMenuItem = async (req, res) => {
   try {
     const { id } = req.params
-    const deleted = await Order.findByIdAndDelete(id)
+    const deleted = await MenuItem.findByIdAndDelete(id)
     if (deleted) {
-      return res.status(200).send('Order deleted')
+      return res.status(200).send('Menu item deleted')
     }
-    throw new Error('Order not found')
+    throw new Error('Menu item not found')
   } catch (error) {
     return res.status(500).send(error.message)
   }
 }
 
 module.exports = {
-  createOrder,
-  getAllOrders,
-  getOrderById,
-  updateOrder,
-  deleteOrder
+  createMenuItem,
+  getAllMenuItems,
+  getMenuItemById,
+  updateMenuItem,
+  deleteMenuItem
 }
