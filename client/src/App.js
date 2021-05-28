@@ -19,8 +19,16 @@ export default class App extends Component {
       dinnerMenu: [],
       dessertMenu: [],
       drinksMenu: [],
-      selectedItem: null // Will be itemID once state sets
+      order: [],
     }
+  }
+
+  addtoOrder = (menuItem) => {
+    this.setState({order: [menuItem, ...this.state.order]})
+  }
+
+  submitOrder = () => {
+    this.setState({order: []})
   }
 
   async componentDidMount() {
@@ -35,6 +43,7 @@ export default class App extends Component {
   }
 
   render() {
+<<<<<<< HEAD
     for (let i = 0; i < this.state.menu.length; i++) {
       switch (this.state.menu[i].type) {
         case 'app':
@@ -53,6 +62,30 @@ export default class App extends Component {
       }
     }
     console.log(this.state.appMenu)
+=======
+
+for (let i=0;i<this.state.menu.length; i++) {
+  // let imagePath = this.state.menu[i].image;
+  // let imageSrc = `../images/${imagePath}`
+  // this.state.menu[i].image = imageSrc
+  switch (this.state.menu[i].type) {
+    case 'app' :
+      this.state.appMenu.push(this.state.menu[i])
+      break;
+    case 'dessert' :
+      this.state.dessertMenu.push(this.state.menu[i])
+      break;
+    case 'dinner' :
+      this.state.dinnerMenu.push(this.state.menu[i])
+      break;
+    case 'drink' :
+      this.state.drinksMenu.push(this.state.menu[i])
+      break;
+    default :
+  }
+}
+
+>>>>>>> d02f6ff98af4e9ea6cdbc7d5442fae16393ad54f
     return (
       <div className="App" style={{ color: 'white' }}>
         <header>
@@ -60,6 +93,7 @@ export default class App extends Component {
         </header>
         <main>
           <Switch>
+<<<<<<< HEAD
             <Route
               exact
               path="/"
@@ -111,6 +145,45 @@ export default class App extends Component {
                 />
               )}
             />
+=======
+            <Route exact path="/" component={(props) => 
+              <Order {...props} 
+                menu={this.state.menu} 
+                selectedItem={this.state.selectedItem}
+                submitOrder = {this.submitOrder}
+                order={this.state.order}
+              />
+            }/>
+            <Route path="/Appetizers" component={(props) => 
+              <Apps {...props} 
+                menu={this.state.appMenu} 
+                selectedItem={this.state.selectedItem} 
+                addtoOrder={this.addtoOrder}
+              />
+            }/>
+            <Route path="/Dinner" component={(props) => 
+              <Dinner {...props} 
+                menu={this.state.dinnerMenu} 
+                selectedItem={this.state.selectedItem} 
+                addtoOrder={this.addtoOrder}
+              />
+            }/>
+            <Route path="/Dessert" component={(props) => 
+              <Dessert {...props} 
+                menu={this.state.dessertMenu} 
+               selectedItem={this.state.selectedItem} 
+               addtoOrder={this.addtoOrder}
+
+              />
+            }/>
+            <Route path="/Drinks" component={(props) => 
+              <Drinks {...props} 
+                menu={this.state.drinksMenu} 
+                selectedItem={this.state.selectedItem} 
+                addtoOrder={this.addtoOrder}
+              />
+            }/>
+>>>>>>> d02f6ff98af4e9ea6cdbc7d5442fae16393ad54f
           </Switch>
         </main>
       </div>
