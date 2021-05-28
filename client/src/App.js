@@ -23,8 +23,8 @@ export default class App extends Component {
     }
   }
 
-  addtoOrder = (item) => {
-    this.setState({order: [item, ...this.state.order]})
+  addtoOrder = (menuItem) => {
+    this.setState({order: [menuItem, ...this.state.order]})
   }
 
   submitOrder = () => {

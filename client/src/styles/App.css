@@ -144,3 +144,13 @@ button {
 .price {
   float: right;
 }
+
+.welcome {
+  width: 50%;
+  margin-top: 10vh;
+  background: rgba(255, 255, 255,0.7);
+  border-radius: 5px;
+  color:black;
+  padding: 10px 16px;
+  text-align: justify;
+}
