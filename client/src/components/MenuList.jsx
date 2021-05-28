@@ -3,25 +3,24 @@ import MenuItemCard from './MenuItemCard'
 
 export default class MenuList extends Component {
 
-  showItem = (menuItem) => {
-    this.props.history.push(`/??????/${menuItem.id}`)
-  }
+  // showItem = (menuItem) => {
+  //   this.props.history.push(`/??????/${menuItem.id}`)
+  // }
 
   render() {
     const menu = this.props.menu
-
-    const menuList = menu.map(menuItem => {
+    const menuList = menu.map((item, index) => {
       return <MenuItemCard
-        key={`${menuItem.id}${menuItem.name}`}
-        showItem={this.showItem}
-        menuItem={menuItem}
+        key={index}
+        // showItem={this.showItem}
+        menuItem={item}
       />
     });
 
     return (
-      <div>
-        { menuList}
-      </div >
+      <div className="menu-list">
+        {menuList}
+      </div>
     )
   }
 }
