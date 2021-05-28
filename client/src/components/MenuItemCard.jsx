@@ -9,11 +9,12 @@ export default class MenuItemCard extends Component {
         className="menu-item"
         onClick={() => this.props.showItem(menuItem)}>
         <img
-          style={{ display: 'block' }}
           src={menuItem.img}
           alt={menuItem.name}
+          width='200'
         />
-        <h3>{menuItem.name}</h3>
+        <h4>{menuItem.name}</h4>
+        <hr />
       </div>
     )
   }
