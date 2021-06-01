@@ -6,7 +6,7 @@ export default class Drinks extends Component {
     return (
       <div className="page">
 
-        <MenuList menu={this.props.menu} />
+        <MenuList menu={this.props.menu} addtoOrder={this.props.addtoOrder} />
 
       </div>
     );

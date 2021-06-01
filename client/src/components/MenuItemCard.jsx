@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 
 export default class MenuItemCard extends Component {
   render() {
-    const { menuItem, addToOrder } = this.props
-    console.log(menuItem.image)
+    const { menuItem } = this.props
     return (
       <div
         className="menu-item">
@@ -14,8 +13,8 @@ export default class MenuItemCard extends Component {
         /> */}
         <h3>{menuItem.name}<span className="price">${menuItem.price}</span></h3>
         <div className="description">{menuItem.description}</div>
-        <button onClick=
-          {() => addToOrder(menuItem)}>Add to Order</button>
+        <button /*onClick=
+          {() => this.props.addToOrder(menuItem)}*/>Add to Order</button>
       </div >
     )
   }
